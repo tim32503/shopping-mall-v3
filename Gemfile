@@ -24,6 +24,7 @@ gem "devise", "~> 4.8"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "faker", "~> 2.17"
 end
 
 group :development do
