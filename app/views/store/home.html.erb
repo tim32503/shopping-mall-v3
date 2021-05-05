@@ -1,1 +1,15 @@
 <h1 class="h1">賺很大商店</h1>
+
+<section class="products">
+  <% @products.each do |product| %>
+  <div class="product">
+    <%= product_img(product.abbr_title) %>
+    <p class="title"><%= product.title %></p>
+    <p class="price">NTD <%= product.price %></p>
+    <p class="description"><%= product.description %></p>
+    <button>加到購物車</button>
+  </div>
+  <% end %>
+</section>
+
+<%= paginate @products %>

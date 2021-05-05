@@ -1,3 +1,29 @@
 .h1 {
   @apply text-5xl font-thin;
 }
+
+.products {
+  @apply grid sm:grid-cols-2 md:grid-cols-4 sm:gap-3 md:gap-4 my-4;
+
+  .product {
+    img {
+      @apply rounded;
+    }
+
+    .title {
+      @apply font-bold text-gray-600 my-1;
+    }
+
+    .price {
+      @apply text-sm font-bold my-1;
+    }
+
+    .description {
+      @apply text-gray-500 font-light;
+    }
+
+    button {
+      @apply bg-red-600 text-white px-3 py-2 text-sm mt-2 hover:bg-red-500;
+    }
+  }
+}
