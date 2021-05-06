@@ -6,7 +6,7 @@
         <%= link_to "登出", destroy_user_session_path, method: :delete %>
       </li>
       <li>
-        <%= link_to "購物車", "#" %>
+        <%= link_to "購物車 (#{current_cart.line_items.count})", cart_path %>
       </li>
     <% else %>
       <li>

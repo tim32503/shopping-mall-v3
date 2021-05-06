@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'store#home'
   resources :products
   resources :line_items
+  resource :cart, only: [:show, :destroy]
 end
