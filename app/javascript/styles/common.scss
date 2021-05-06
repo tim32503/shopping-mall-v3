@@ -2,6 +2,26 @@
   @apply text-5xl font-thin;
 }
 
+.flash {
+  @apply pb-2 text-green-800;
+}
+
+nav.navbar {
+  @apply py-2;
+
+  ul {
+    @apply flex;
+
+    li {
+      @apply flex align-middle;
+
+      a {
+        @apply text-lg font-light mr-2 hover:text-green-800;
+      }
+    }
+  }
+}
+
 .products {
   @apply grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-3 md:gap-4 my-4;
 
