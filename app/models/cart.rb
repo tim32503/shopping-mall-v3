@@ -14,6 +14,6 @@ class Cart < ApplicationRecord
   end
 
   def empty?
-    line_items.nil?
+    line_items.count == 0
   end
 end

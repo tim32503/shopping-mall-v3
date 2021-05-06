@@ -11,4 +11,9 @@ module CurrentCart
     find_cart
     @cart
   end
+
+  def empty_cart!
+    Cart.find_by(id: session[:cart9527]).destroy
+    session[:cart9527] = nil
+  end
 end

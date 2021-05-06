@@ -1,11 +1,13 @@
 <h1 class="h1">購物車</h1>
 
 <% if current_cart.empty? %>
-  目前沒東西
+  <p class="text-lg my-4">
+    目前空空的，回<%= link_to "上一頁", root_path, class: "underline" %>挑一些東西吧！
+  </p>
 <% else %>
   <ul class="my-2">
   <% current_cart.line_items.each do |item| %>
-    <li class="grid grid-cols-4 gap-3 py-1 flex items-center">
+    <li class="cart-item-list">
       <div class="w-36">
         <%= product_img(item.product) %>
       </div>
@@ -25,5 +27,6 @@
 
 <section class="flex mt-4">
 <%= link_to "商品列表", root_path, class: "bg-blue-500 px-4 py-2 text-white text-lg" %>
-<%= link_to "結帳！", "#", class: "bg-red-500 px-4 py-2 text-white text-lg" %>
+<%= link_to "清空購物車", cart_path, method: :delete, data: {confirm: "確認清空購物車?!"}, class: "bg-green-500 px-4 py-2 text-white text-lg" unless current_cart.empty? %>
+<%= link_to "結帳！", "#", class: "bg-red-500 px-4 py-2 text-white text-lg" unless current_cart.empty? %>
 </section>

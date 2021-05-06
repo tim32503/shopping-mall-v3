@@ -6,6 +6,10 @@
   @apply pb-2 text-green-800;
 }
 
+.cart-item-list {
+  @apply grid grid-cols-4 gap-3 py-1 flex items-center;
+}
+
 nav.navbar {
   @apply py-2;
 
