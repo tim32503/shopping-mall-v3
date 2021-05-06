@@ -7,7 +7,7 @@
     <p class="title"><%= product.title %></p>
     <p class="price">NTD <%= number_to_currency product.price %></p>
     <p class="description"><%= product.description %></p>
-    <%= link_to "加到購物車", line_items_path(product_id: product.id), class: 'addToCartBtn' %>
+    <%= link_to "加到購物車", line_items_path(product_id: product.id), method: 'post', class: 'addToCartBtn' %>
   </div>
   <% end %>
 </section>
