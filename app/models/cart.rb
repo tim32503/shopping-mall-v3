@@ -12,4 +12,8 @@ class Cart < ApplicationRecord
 
     found_item
   end
+
+  def empty?
+    line_items.nil?
+  end
 end
