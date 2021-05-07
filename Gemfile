@@ -22,6 +22,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "devise", "~> 4.8"
 gem "kaminari", "~> 1.2"
 gem "aasm", "~> 5.2"
+gem "braintree", "~> 3.4.0"
+gem 'libxml-ruby', '~> 3.2', '>= 3.2.1'
+gem "figaro", "~> 1.2"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
