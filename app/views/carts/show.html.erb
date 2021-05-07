@@ -28,5 +28,5 @@
 <section class="flex mt-4">
 <%= link_to "商品列表", root_path, class: "bg-blue-500 px-4 py-2 text-white text-lg" %>
 <%= link_to "清空購物車", cart_path, method: :delete, data: {confirm: "確認清空購物車?!"}, class: "bg-green-500 px-4 py-2 text-white text-lg" unless current_cart.empty? %>
-<%= link_to "結帳！", "#", class: "bg-red-500 px-4 py-2 text-white text-lg" unless current_cart.empty? %>
+<%= link_to "結帳！", checkout_cart_path, class: "bg-red-500 px-4 py-2 text-white text-lg" unless current_cart.empty? %>
 </section>
